@@ -1,0 +1,1 @@
+add_library(services_lib STATIC DeviceService.cpp)

@@ -1,0 +1,83 @@
+# Ignore CMake build files
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+
+# Ignore CLion specific files
+.idea/
+.idea_modules/
+
+# Ignore Visual Studio Code specific files
+.vscode/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore build directories
+/build/
+/out/
+
+# Ignore user-specific files
+*.iml
+*.ipr
+*.iws
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore backup files
+*.bak
+*.swp
+*.swo
+*.old
+
+# Ignore generated files
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.pyc
+*.class
+
+# Ignore test results
+/test-results/
+
+# Ignore coverage results
+/coverage/
+
+# Ignore package files
+*.tar.gz
+*.zip
+*.jar
+*.war
+*.ear
+
+# Ignore configuration files
+*.config
+*.cfg
+
+# Ignore virtual environment directories
+/venv/
+/env/
+/envs/
+/node_modules/
+
+# Ignore CLion-specific deployment configurations
+.idea/deployment.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/libraries/
+
+# Ignore JetBrains IDE project files and directories
+.idea/*
+
+# Ignore run configurations
+.idea/runConfigurations/
