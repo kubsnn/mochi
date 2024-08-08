@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(app)
+project(app VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -33,6 +33,29 @@ find_package(Boost REQUIRED COMPONENTS system)
 
 include_directories(${Boost_INCLUDE_DIRS})
 
-include_directories(src)
-
 add_subdirectory(src)
+
+include_directories(include)
+
+add_subdirectory(ut)
+
+# Configure a Config file for find_package
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file(
+        "${CMAKE_CURRENT_BINARY_DIR}/MochiConfigVersion.cmake"
+        VERSION ${PROJECT_VERSION}
+        COMPATIBILITY AnyNewerVersion
+)
+
+configure_file(CMakeModules/MochiConfig.cmake
+        "${CMAKE_CURRENT_BINARY_DIR}/MochiConfig.cmake"
+        COPYONLY
+)
+
+install(FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/MochiConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/MochiConfigVersion.cmake"
+        DESTINATION lib/cmake/mochi
+)
+
