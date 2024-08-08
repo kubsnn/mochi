@@ -7,5 +7,4 @@ add_library(mochi_lib STATIC
 target_include_directories(mochi_lib PUBLIC
         ${Boost_INCLUDE_DIRS}
         ${consolecolors_SOURCE_DIR}/include
-        ${json_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/include)
+        ${json_SOURCE_DIR}/include)

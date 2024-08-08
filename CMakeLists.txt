@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(app VERSION 0.1.0)
+project(mochi VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
